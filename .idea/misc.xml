@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/about_icon_email.xml" value="0.1355" />
         <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/camera_button_circle.xml" value="0.1" />
         <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/circlebackgroundblue.xml" value="0.131" />
         <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/green_grad.xml" value="0.131" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/solid_scanner_circle.xml" value="0.131" />
         <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/about_page.xml" value="0.18489583333333334" />
         <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/about_page_separator.xml" value="0.17083333333333334" />
