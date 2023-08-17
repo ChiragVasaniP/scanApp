@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solid_qr_scanner"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+        <ImageView
+            android:layout_width="700dp"
+            android:layout_height="750dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-150dp"
+            android:layout_marginEnd="-450dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/circle_yello" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:onClick="goBackk"
+                    android:src="@drawable/ic_arrow" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="15dp"
+                android:layout_weight="60"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/resultImageMain"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/border_image"
+                        android:clickable="true"
+                        android:maxWidth="250sp"
+                        android:maxHeight="250sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/resultImageMain"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/border_stroke"
+                        android:minHeight="150dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/icTick"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/green_grad_circle"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_check" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toRightOf="@+id/icTick">
+
+                                <TextView
+                                    android:id="@+id/idText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Text:"
+                                    android:textColor="#d94e4e4e"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvTxtqrcode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/idText"
+                                    android:textColor="?attr/textcolor"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dp"
+                            android:background="#1a000000" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/icTickTwo"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/green_grad_circle"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_check" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toRightOf="@+id/icTickTwo">
+
+                                <TextView
+                                    android:id="@+id/labelFormat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/title_format"
+                                    android:textColor="#d94e4e4e"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tvFormat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/labelFormat"
+                                    android:textColor="?attr/textcolor"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/banner_qr_scanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/ivCopy"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/solid_scanner_circle"
+                            android:onClick="onClick"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_copy_24dp"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvCopy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivCopy"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="7dp"
+                            android:text="Copy"
+                            android:textColor="#d94e4e4e"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/ivOpenInWeb"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/solid_scanner_circle"
+                            android:onClick="onClick"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_open_in_browser_24dp"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvOpenInWeb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivOpenInWeb"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="7dp"
+                            android:text="Open in Web"
+                            android:textColor="#d94e4e4e"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/ivShare"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/solid_scanner_circle"
+                            android:onClick="onClick"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_share_24dp"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivShare"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="7dp"
+                            android:text="Share"
+                            android:textColor="#d94e4e4e"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

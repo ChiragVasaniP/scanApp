@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/about_icon_email.xml" value="0.1355" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/camera_button_circle.xml" value="0.1" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/circlebackgroundblue.xml" value="0.131" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/green_grad.xml" value="0.131" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/drawable/solid_scanner_circle.xml" value="0.131" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/about_page.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/about_page_separator.xml" value="0.17083333333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_app_scan.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_barcode_generate.xml" value="0.17083333333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_generate.xml" value="0.17083333333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_generator_result.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_geo_generator.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_history.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_history_details.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_scanner.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_splash.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_text_generator.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_vcard_generator.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/activity_wifi_generator.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/app_scan_activity_layout.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/design_text_input_end_icon.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/fragment_camera_screen.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/fragment_image_crop.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/fragment_image_processing.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/history_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/image_preview_adapter.xml" value="0.1" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/progress_layout.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/scan_surface_view.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/layout/spinner_item.xml" value="0.18489583333333334" />
+        <entry key="..\:/A Chirag/ScanApp/app/src/main/res/menu/history_optionsmenu.xml" value="0.18489583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

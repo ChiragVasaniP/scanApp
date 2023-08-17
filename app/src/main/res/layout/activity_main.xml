@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/nexa_bold"
+                        android:text="QuickScan"
+                        android:textAllCaps="false"
+                        android:textColor="#000"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bing"
+                        android:layout_marginTop="-2dp"
+                        android:fontFamily="@font/nexa_light"
+                        android:text="Document &amp; QR Code Scanner"
+                        android:textAllCaps="true"
+                        android:textColor="#292929"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="44"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_weight="1"
+                    android:onClick="StartDocScan"
+                    app:cardBackgroundColor="@color/solid_doc_scan"
+                    app:cardCornerRadius="25dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="-30dp"
+                            android:layout_marginEnd="-5dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="-40dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="15dp"
+                            android:src="@drawable/scan"
+                            app:tint="@color/solid_doc_scan" />
+
+                        <TextView
+                            android:id="@+id/tvDocumentScanner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tvDocumentScannerTwo"
+                            android:layout_marginStart="15dp"
+                            android:text="Document Scanner"
+                            android:textColor="@color/colorWhiteBackground"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvDocumentScannerTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Scan Your Documents"
+                            android:textColor="#ccffffff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/scan_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/solid_qr_scanner"
+                    app:cardCornerRadius="25dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="-30dp"
+                            android:layout_marginEnd="-5dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="-40dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_scan"
+                            app:tint="@color/solid_qr_scanner" />
+
+                        <TextView
+                            android:id="@+id/tvQRScanner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tvQRScannerTwo"
+                            android:layout_marginStart="15dp"
+                            android:text="QR Scanner"
+                            android:textColor="@color/colorWhiteBackground"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvQRScannerTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="QR &amp; Barcode Scanner"
+                            android:textColor="#ccffffff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/generate_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/solid_qr_generator"
+                    app:cardCornerRadius="25dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="-30dp"
+                            android:layout_marginEnd="-5dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="-40dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_create"
+                            app:tint="@color/solid_qr_generator" />
+
+                        <TextView
+                            android:id="@+id/tvQRGen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tvQRGenTwo"
+                            android:layout_marginStart="15dp"
+                            android:text="QR Generator"
+                            android:textColor="@color/colorWhiteBackground"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvQRGenTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Create QR &amp; Barcodes"
+                            android:textColor="#ccffffff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/history_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/solid_history"
+                    app:cardCornerRadius="25dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="-30dp"
+                            android:layout_marginEnd="-5dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="-40dp"
+                            android:src="@drawable/circle" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/circle_white"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_history"
+                            app:tint="@color/solid_history" />
+
+                        <TextView
+                            android:id="@+id/tvHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tvHistoryTwo"
+                            android:layout_marginStart="15dp"
+                            android:text="History"
+                            android:textColor="@color/colorWhiteBackground"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvHistoryTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="History of QR &amp; Barcodes"
+                            android:textColor="#ccffffff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="36">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="#ffc107"
+                android:padding="2dp"
+                android:text="Ad"
+                android:textColor="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/nativeFrameHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

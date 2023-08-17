@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16sp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/tool"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:onClick="goBack"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="#20335b" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Generate QR Code"
+                    android:textColor="#20335b"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/banner_vcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0"
+                android:paddingStart="8dp"
+                android:text="@string/tv_format"
+                android:textColor="?attr/textcolor" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0"
+                android:textColor="?attr/textcolor" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_name"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtFN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_fn"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtBday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_bday"
+                    android:inputType="date"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtOrg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_org"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtPhotoUri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_photo"
+                    android:inputType="textUri"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtWeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_web"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtMobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_mobil"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtTeleWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_tele_work"
+                    android:inputType="phone"
+                    android:textAlignment="viewStart"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtTelePrivat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_tele_private"
+                    android:inputType="phone"
+                    android:textAlignment="viewStart"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtStreet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_street"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtPLZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_plz"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_city"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_state"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_country"
+                    android:inputType="textPersonName"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <EditText
+                    android:id="@+id/txtNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="@string/hint_note"
+                    android:inputType="textMultiLine"
+                    android:textColor="?attr/textcolor" />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnGenerateVCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10sp"
+                android:background="@drawable/yellow_grad"
+                android:text="@string/title_generate"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/nativeVCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

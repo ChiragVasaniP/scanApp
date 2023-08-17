@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="barcode_formats_array">
+        <item>BARCODE</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>UPC_A</item>
+    </array>
+
+    <array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </array>
+
+    <array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </array>
+    <array name="text_formats_encryption">
+        <item>None</item>
+        <item>WEP</item>
+        <item>WPA/WPA2</item>
+    </array>
+</resources>

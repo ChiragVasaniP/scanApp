@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:onClick="goBack"
+                android:src="@drawable/ic_arrow"
+                app:tint="#20335b" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Generate Barcode"
+                android:textColor="#20335b"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/barcode_card"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageBarcode"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circlebackgroundblue"
+                        android:padding="8sp"
+                        android:src="@drawable/ic_barcode_black"
+                        app:tint="@color/colorWhiteBackground" />
+
+                    <EditText
+                        android:id="@+id/tfBarcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/imageBarcode"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_text2qr"
+                        android:inputType="textMultiLine"
+                        android:textColor="?attr/textcolor" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0"
+                android:text="@string/tv_format"
+                android:textColor="?attr/textcolor" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0"
+                android:textColor="?attr/textcolor" />
+
+            <Button
+                android:id="@+id/btnGenerateBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/green_grad"
+                android:text="@string/title_generate"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/nativeFrameBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/bg_gen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:onClick="goBack"
+                android:src="@drawable/ic_arrow"
+                app:tint="#20335b" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="QR Generator"
+                android:textColor="#20335b"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tool"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/barcode_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/ic_barcode"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10sp">
+
+                        <ImageView
+                            android:layout_width="32sp"
+                            android:layout_height="32sp"
+                            android:background="@drawable/circlebackgroundblue"
+                            android:padding="10sp"
+                            android:src="@drawable/ic_barcode_black"
+                            app:tint="@color/colorWhiteBackground" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ic_barcode"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_barcode_title"
+                            android:textColor="#47556e"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_barcode_hint"
+                            android:textColor="#47556e"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:padding="8dp"
+                        android:src="@drawable/right_arrow"
+                        app:tint="#47556e" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/text_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/ic_text"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10sp">
+
+                        <ImageView
+                            android:layout_width="32sp"
+                            android:layout_height="32sp"
+                            android:background="@drawable/circlebackgroundpurple"
+                            android:padding="10sp"
+                            android:src="@drawable/ic_text_black_24dp"
+                            app:tint="@color/colorWhiteBackground" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ic_text"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_text_title"
+                            android:textColor="#47556e"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_barcode_hint"
+                            android:textColor="#47556e"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:padding="8dp"
+                        android:src="@drawable/right_arrow"
+                        app:tint="#47556e" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/geo_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/ic_loc"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10sp">
+
+                        <ImageView
+                            android:layout_width="32sp"
+                            android:layout_height="32sp"
+                            android:background="@drawable/circlebackgroundpink"
+                            android:padding="10sp"
+                            android:src="@drawable/ic_location_on_black_24dp"
+                            app:tint="@color/colorWhiteBackground" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ic_loc"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_location_title"
+                            android:textColor="#47556e"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_barcode_hint"
+                            android:textColor="#47556e"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:padding="8dp"
+                        android:src="@drawable/right_arrow"
+                        app:tint="#47556e" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contact_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/ic_contact"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10sp">
+
+                        <ImageView
+                            android:layout_width="32sp"
+                            android:layout_height="32sp"
+                            android:background="@drawable/circlebackgroundgreen"
+                            android:padding="10sp"
+                            android:src="@drawable/ic_perm_contact_calendar_black_24dp"
+                            app:tint="@color/colorWhiteBackground" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ic_contact"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_contact_title"
+                            android:textColor="#47556e"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_barcode_hint"
+                            android:textColor="#47556e"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:padding="8dp"
+                        android:src="@drawable/right_arrow"
+                        app:tint="#47556e" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wifi_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/ic_wifi"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10sp">
+
+                        <ImageView
+                            android:layout_width="32sp"
+                            android:layout_height="32sp"
+                            android:background="@drawable/circlebackgroundyellow"
+                            android:padding="10sp"
+                            android:src="@drawable/ic_wifi_black_24dp"
+                            app:tint="@color/colorWhiteBackground" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ic_wifi"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_wifi_title"
+                            android:textColor="#47556e"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/card_barcode_hint"
+                            android:textColor="#47556e"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:padding="8dp"
+                        android:src="@drawable/right_arrow"
+                        app:tint="#47556e" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/nativeFrameGen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

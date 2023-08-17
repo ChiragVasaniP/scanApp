@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="actionbaricon">@color/actionBarIcon_dark</item>
+        <item name="backgroundcolor">#ffff</item>
+        <item name="bottomnavcolor">#f9f9f9</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="textcolor">#000000</item>
+    </style>
+
+    <style name="darktheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColorHint">#8c8c8c</item>
+        <item name="actionbaricon">@color/actionBarIcon_light</item>
+        <item name="backgroundcolor">#000000</item>
+        <item name="bottomnavcolor">#212121</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorPrimary">#212121</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="textcolor">#ffffff</item>
+    </style>
+
+    <style name="about_About">
+    </style>
+    <style name="about_About.wrapper" parent="@style/about_About">
+        <item name="android:background">@color/about_background_color</item>
+    </style>
+    <style name="about_description" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/about_description_text_size</item>
+        <item name="android:textColor">@color/about_description_text_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:text">@string/about_page_description</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+    <style name="about_elementTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/about_item_text_size</item>
+        <item name="android:textColor">@color/about_text_color</item>
+    </style>
+    <style name="about_groupTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/about_group_item_text_size</item>
+        <item name="android:textColor">@color/about_item_text_color</item>
+    </style>
+    <style name="about_image">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+    </style>
+    <style name="about_separator">
+        <item name="android:background">@color/about_separator_color</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/about_separator_height</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="about_sub_wrapper">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>
